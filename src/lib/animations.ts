@@ -112,6 +112,43 @@ export const scaleInSpring: Variants = {
   },
 }
 
+/** Spring-bounce scale + rise. Good for demo reveals and pricing cards. */
+export const springScaleUp: Variants = {
+  hidden: { opacity: 0, scale: 0.88, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 140,
+      damping: 18,
+    },
+  },
+}
+
+/** Blur-to-clear + rise. Premium feel for feature/tech sections. */
+export const blurInUp: Variants = {
+  hidden: { opacity: 0, y: 24, filter: 'blur(8px)' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94] },
+  },
+}
+
+/** Slight rotation + rise. Playful for persona/use-case cards. */
+export const rotateInUp: Variants = {
+  hidden: { opacity: 0, y: 40, rotate: 2.5 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    transition: { type: 'spring', stiffness: 120, damping: 18 },
+  },
+}
+
 /* ============================================
    Slide Variants
    ============================================ */

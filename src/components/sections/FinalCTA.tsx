@@ -3,7 +3,7 @@ import { Badge } from '@/components/common/Badge'
 import { Button } from '@/components/common/Button'
 import { GradientText } from '@/components/common/GradientText'
 import { content } from '@/data/content'
-import { fadeInUp, viewportOnce } from '@/lib/animations'
+import { scaleIn, fadeInUp, viewportOnce } from '@/lib/animations'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -229,7 +229,7 @@ export function FinalCTA() {
       />
 
       <div className="container-main relative z-10">
-        <AnimatedSection className="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto">
+        <AnimatedSection className="flex flex-col items-center text-center gap-6 max-w-2xl mx-auto" variants={scaleIn}>
           {/* Badge */}
           <Badge>{cta.badge}</Badge>
 

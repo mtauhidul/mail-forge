@@ -6,7 +6,7 @@ import { OrbBackground } from '@/components/effects/OrbBackground'
 import { content } from '@/data/content'
 import { demoSuggestions, heroDemoResult } from '@/data/mockData'
 import { heroContainer, heroItem } from '@/lib/animations'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Check, Copy, Play, Sparkles } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
@@ -211,13 +211,13 @@ function DemoWidget() {
             className="space-y-3"
           >
             <div
-              className="rounded-xl px-4 py-3.5 min-h-[190px] text-xs leading-relaxed font-mono overflow-auto"
+              className="rounded-xl px-4 py-3.5 min-h-[120px] sm:min-h-[190px] text-xs leading-relaxed font-mono overflow-auto"
               style={{
                 background: 'var(--bg-secondary)',
                 border: '1px solid var(--border)',
                 color: 'var(--text-primary)',
                 whiteSpace: 'pre-wrap',
-                maxHeight: '240px',
+                maxHeight: 'clamp(180px, 40vh, 240px)',
               }}
             >
               {displayed}
@@ -262,9 +262,14 @@ function DemoWidget() {
 export function Hero() {
   const { hero } = content
 
+  // Subtle parallax: copy drifts up more than the demo widget → depth
+  const { scrollY } = useScroll()
+  const copyY   = useTransform(scrollY, [0, 600], [0, -50])
+  const widgetY = useTransform(scrollY, [0, 600], [0, -25])
+
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center">
-      <OrbBackground />
+      <OrbBackground parallax />
 
       <div className="container-main relative z-10 w-full pt-28 pb-20">
         <motion.div
@@ -274,7 +279,7 @@ export function Hero() {
           className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center"
         >
           {/* ── Left: Copy ── */}
-          <div className="flex flex-col gap-6 lg:gap-7">
+          <motion.div style={{ y: copyY }} className="flex flex-col gap-6 lg:gap-7">
             <motion.div variants={heroItem}>
               <Badge dot>{hero.badge}</Badge>
             </motion.div>
@@ -337,11 +342,12 @@ export function Hero() {
                 ))}
               </div>
             </motion.div>
-          </div>
+          </motion.div>
 
           {/* ── Right: Demo Widget ── */}
           <motion.div
             variants={heroItem}
+            style={{ y: widgetY }}
             className="w-full lg:max-w-[480px] lg:ml-auto"
           >
             <DemoWidget />

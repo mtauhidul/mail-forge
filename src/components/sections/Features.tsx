@@ -2,20 +2,22 @@ import { AnimatedSection } from '@/components/common/AnimatedSection'
 import { Badge } from '@/components/common/Badge'
 import { GlassCard } from '@/components/common/GlassCard'
 import { GradientText } from '@/components/common/GradientText'
+import { Icon } from '@/components/common/Icon'
+import { ParallaxBlob } from '@/components/effects/ParallaxBlob'
 import { content } from '@/data/content'
-import { fadeInUp, viewportOnce } from '@/lib/animations'
+import { blurInUp, viewportOnce } from '@/lib/animations'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 // ── Static data for mini-widgets ─────────────────────────────────────────────
 
 const TEMPLATE_CATEGORIES = [
-  { label: 'Cold Outreach', emoji: '🚀' },
-  { label: 'Follow-up', emoji: '🔄' },
-  { label: 'Newsletter', emoji: '📰' },
-  { label: 'Support Reply', emoji: '🎧' },
-  { label: 'Job Application', emoji: '💼' },
-  { label: 'Partnership', emoji: '🤝' },
+  { label: 'Cold Outreach' },
+  { label: 'Follow-up' },
+  { label: 'Newsletter' },
+  { label: 'Support Reply' },
+  { label: 'Job Application' },
+  { label: 'Partnership' },
 ]
 
 const TONES = ['Professional', 'Friendly', 'Casual', 'Persuasive'] as const
@@ -62,7 +64,7 @@ function TemplatesWidget() {
   return (
     <div className="flex flex-col gap-4 h-full">
       <div className="flex flex-wrap gap-2">
-        {TEMPLATE_CATEGORIES.map(({ label, emoji }) => (
+        {TEMPLATE_CATEGORIES.map(({ label }) => (
           <span
             key={label}
             className="text-xs px-2.5 py-1 rounded-full font-medium"
@@ -72,7 +74,7 @@ function TemplatesWidget() {
               border: '1px solid var(--border-accent)',
             }}
           >
-            {emoji} {label}
+            {label}
           </span>
         ))}
       </div>
@@ -390,7 +392,7 @@ function BentoCard({
   return (
     <motion.div
       className={colSpan === 2 ? 'lg:col-span-2' : ''}
-      variants={fadeInUp}
+      variants={blurInUp}
       initial="hidden"
       whileInView="visible"
       viewport={viewportOnce}
@@ -402,7 +404,12 @@ function BentoCard({
       >
         {/* Card header */}
         <div className="flex items-start gap-3">
-          <span className="text-2xl leading-none">{icon}</span>
+          <div
+            className="flex items-center justify-center w-9 h-9 rounded-lg shrink-0 mt-0.5"
+            style={{ background: 'var(--accent-subtle)', border: '1px solid var(--border-accent)', color: 'var(--accent)' }}
+          >
+            <Icon name={icon} size={17} />
+          </div>
           <div>
             <h3
               className="text-sm font-semibold font-heading leading-tight"
@@ -475,10 +482,16 @@ export function Features() {
   ]
 
   return (
-    <section id="features" className="section-py">
-      <div className="container-main">
+    <section id="features" className="section-py relative overflow-hidden">
+      <ParallaxBlob
+        color="var(--orb-1)"
+        size={480}
+        distance={-55}
+        className="-top-20 -left-24"
+      />
+      <div className="container-main relative z-10">
         {/* Section header */}
-        <AnimatedSection className="text-center mb-14 space-y-4">
+        <AnimatedSection className="text-center mb-14 space-y-4" variants={blurInUp}>
           <Badge>{features.badge}</Badge>
           <h2
             className="text-h2 font-heading"
