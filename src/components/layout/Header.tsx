@@ -1,3 +1,4 @@
+import mailforgeLogo from '@/assets/mailforge.png'
 import { Button } from '@/components/common/Button'
 import { useTheme } from '@/contexts/ThemeContext'
 import { content } from '@/data/content'
@@ -14,15 +15,11 @@ function Logo() {
       href="#"
       className="flex items-center gap-2.5 select-none focus-visible:outline-none"
     >
-      {/* Icon mark */}
-      <span
-        className="flex items-center justify-center w-8 h-8 rounded-lg text-white text-sm font-bold"
-        style={{
-          background: 'linear-gradient(135deg, var(--accent) 0%, #6366f1 100%)',
-        }}
-      >
-        M
-      </span>
+      <img
+        src={mailforgeLogo}
+        alt="MailForgeAI logo"
+        className="w-8 h-8 rounded-lg object-cover"
+      />
       <span
         className="text-lg font-heading font-bold tracking-tight"
         style={{ color: 'var(--text-primary)' }}
