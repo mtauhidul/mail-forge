@@ -24,6 +24,5 @@ MailForge AI is a modern, single-page SaaS landing page for an AI email writing 
 
 [mail-forge-ai.vercel.app](https://mail-forge-ai.vercel.app/)
 
-```
 
-```
+
