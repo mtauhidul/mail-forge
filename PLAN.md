@@ -4,21 +4,22 @@
 > **Purpose:** Portfolio showcase — modern design & animations
 > **Started:** April 15, 2026
 > **Status:** 🟡 In Progress
-> **Current Phase:** Phase 3 — Header & Footer
+> **Current Phase:** Phase 5 — Problem & How It Works
 
 ---
 
 ## 📋 Product Overview
 
-| Detail | Info |
-|--------|------|
-| **Name** | MailForge AI |
-| **Tagline** | "Write Perfect Emails in 10 Seconds" |
-| **Type** | AI Email Writing Assistant SaaS |
-| **Layout** | Single-page, scroll-based |
-| **Design** | Dark-first, colorful gradients, glassmorphism, minimal |
+| Detail      | Info                                                   |
+| ----------- | ------------------------------------------------------ |
+| **Name**    | MailForge AI                                           |
+| **Tagline** | "Write Perfect Emails in 10 Seconds"                   |
+| **Type**    | AI Email Writing Assistant SaaS                        |
+| **Layout**  | Single-page, scroll-based                              |
+| **Design**  | Dark-first, colorful gradients, glassmorphism, minimal |
 
 ### Design Goals
+
 - Animated gradient backgrounds and mesh effects
 - Scroll-triggered animations (Framer Motion)
 - Glassmorphism cards with glow effects
@@ -30,16 +31,16 @@
 
 ## 🛠 Tech Stack
 
-| Tool | Purpose |
-|------|---------|
-| React 19 + TypeScript | UI framework |
-| Vite 8 | Build tool |
-| Tailwind CSS v4 | Styling |
-| Shadcn/UI | Base component library |
-| Framer Motion | Animations |
-| Lucide React | Icons |
-| clsx + tailwind-merge | Class utilities |
-| pnpm | Package manager |
+| Tool                  | Purpose                |
+| --------------------- | ---------------------- |
+| React 19 + TypeScript | UI framework           |
+| Vite 8                | Build tool             |
+| Tailwind CSS v4       | Styling                |
+| Shadcn/UI             | Base component library |
+| Framer Motion         | Animations             |
+| Lucide React          | Icons                  |
+| clsx + tailwind-merge | Class utilities        |
+| pnpm                  | Package manager        |
 
 ---
 
@@ -93,6 +94,7 @@ src/
 ## 🎨 Design System
 
 ### Color Palette
+
 ```
 Blue:    #2563eb   (primary actions)
 Purple:  #8b5cf6   (accents, gradients)
@@ -112,6 +114,7 @@ Border:    rgba(255,255,255,0.1)
 ```
 
 ### Typography
+
 ```
 Headings:  'Inter' or 'Space Grotesk' (bold, tight tracking)
 Body:      'Inter' (regular, relaxed line-height)
@@ -125,6 +128,7 @@ Scale:
 ```
 
 ### Animation Conventions
+
 ```
 Fade in up:     y: 30 → 0, opacity: 0 → 1, duration: 0.6s
 Stagger:        delayChildren: 0.1, staggerChildren: 0.1
@@ -153,6 +157,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## ✅ Phase 0: Project Setup — COMPLETE
+
 **Completed:** April 15, 2026
 
 - [x] Vite + React + TypeScript initialized
@@ -166,6 +171,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## ✅ Phase 1: Design System & Foundation — COMPLETE
+
 **Completed:** April 15, 2026
 
 - [x] Install Framer Motion: `pnpm add framer-motion`
@@ -180,6 +186,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## ✅ Phase 2: Core Reusable Components — COMPLETE
+
 **Completed:** April 16, 2026
 
 - [x] `AnimatedSection` + `AnimatedGroup` — scroll-triggered wrappers
@@ -195,51 +202,57 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 3: Header & Footer
-**Status:** 0% Complete
 
-- [ ] `Header.tsx`
-  - [ ] Logo (MailForge AI wordmark with icon)
-  - [ ] Nav links: Features, How it Works, Pricing, Demo
-  - [ ] Dark mode toggle button
-  - [ ] "Get Started Free" CTA button
-  - [ ] Sticky on scroll with backdrop blur
-  - [ ] Mobile: hamburger menu with slide-down drawer
-- [ ] `Footer.tsx`
-  - [ ] Logo + tagline
-  - [ ] Links: Product, Resources, Legal
-  - [ ] Social icons (Twitter, GitHub, LinkedIn)
-  - [ ] Copyright line
+**Status:** ✅ Complete
+
+- [x] `Header.tsx`
+  - [x] Logo (MailForge AI wordmark with icon)
+  - [x] Nav links: Features, How it Works, Pricing, Demo
+  - [x] Dark mode toggle button
+  - [x] "Get Started Free" CTA button
+  - [x] Sticky on scroll with backdrop blur
+  - [x] Mobile: hamburger menu with slide-down drawer
+- [x] `Footer.tsx`
+  - [x] Logo + tagline
+  - [x] Links: Product, Resources, Legal
+  - [x] Social icons (Twitter, GitHub, LinkedIn)
+  - [x] Copyright line
 
 ---
 
-## 🔄 Phase 4: Hero Section
-**Status:** 0% Complete
+## ✅ Phase 4: Hero Section — COMPLETE
 
-- [ ] Animated gradient/mesh background (purple-blue-dark)
-- [ ] Floating blur orbs for depth
-- [ ] Headline with gradient text highlight
-- [ ] Subheadline with staggered fade-in
-- [ ] Two CTA buttons: "Start Free" (primary) + "Watch Demo" (ghost)
-- [ ] Trust bar: "10,000+ users • 4.9★ rating • Free to start"
-- [ ] Interactive demo widget:
-  - [ ] Scenario input ("I need to follow up with a lead...")
-  - [ ] Tone selector (Professional / Friendly / Casual)
-  - [ ] Generate button with loading animation
-  - [ ] Output card with typing animation effect
-  - [ ] Copy to clipboard button
+**Completed:** April 16, 2026
+
+- [x] Orb background atmosphere for depth
+- [x] Headline with gradient text highlight
+- [x] Subheadline with staggered fade-in (heroContainer / heroItem variants)
+- [x] Two CTA buttons: "Start writing for free" (primary) + "See how it works" (secondary)
+- [x] Trust bar: 3 stats (10K+ users, 4.9★ rating, 2 min saved)
+- [x] Interactive demo widget (right column on desktop):
+  - [x] Scenario textarea with focus border-accent effect
+  - [x] Suggestion chips (3 quick-fill prompts)
+  - [x] Tone selector (Professional / Friendly / Casual / Persuasive)
+  - [x] Generate button with loading animation (1.8s fake delay)
+  - [x] Output card with cursor-blink typewriter animation (~14ms/char)
+  - [x] Copy to clipboard button with check icon feedback
+  - [x] "Try again" ghost button to reset
 
 ---
 
 ## 🔄 Phase 5: Problem & How It Works
+
 **Status:** 0% Complete
 
 **Problem Section:**
+
 - [ ] Section headline ("Sound familiar?")
 - [ ] 5 pain point cards in responsive grid
 - [ ] Icons with subtle pulse animation
 - [ ] Scroll-triggered stagger entrance
 
 **How It Works Section:**
+
 - [ ] 3-step cards with large step numbers
 - [ ] Connecting dashed line between steps (desktop)
 - [ ] Icons and brief descriptions
@@ -248,6 +261,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 6: Features Section (Bento Grid)
+
 **Status:** 0% Complete
 
 - [ ] Responsive bento grid layout (mix of 1×1 and 2×1 cards)
@@ -263,6 +277,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 7: Demo / Examples Section
+
 **Status:** 0% Complete
 
 - [ ] Section headline ("See it in action")
@@ -275,14 +290,17 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 8: Use Cases & Testimonials
+
 **Status:** 0% Complete
 
 **Use Cases Section:**
+
 - [ ] 6 persona cards (Sales, Entrepreneur, Student, Non-native speaker, Job seeker, Support agent)
 - [ ] Icon + role title + one-line value prop each
 - [ ] Hover: card lifts with colored glow matching persona
 
 **Testimonials Section:**
+
 - [ ] 6 mock testimonials with avatars, name, role, company
 - [ ] Star ratings
 - [ ] Auto-scrolling infinite carousel (horizontal)
@@ -291,6 +309,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 9: Pricing Section
+
 **Status:** 0% Complete
 
 - [ ] Monthly / Annual billing toggle (animated, "Save 20%" badge)
@@ -303,9 +322,11 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 10: Final CTA & Footer
+
 **Status:** 0% Complete
 
 **Final CTA Section:**
+
 - [ ] Bold headline ("Start writing better emails today")
 - [ ] Email input + "Get Early Access" button
 - [ ] "No credit card required" note
@@ -317,6 +338,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 11: Global Polish & Performance
+
 **Status:** 0% Complete
 
 - [ ] Audit all scroll animations — ensure consistency
@@ -332,6 +354,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 ---
 
 ## 🔄 Phase 12: Testing & Deployment
+
 **Status:** 0% Complete
 
 - [ ] Cross-browser: Chrome, Firefox, Safari, Edge
@@ -347,23 +370,23 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 
 ## 📊 Progress Tracker
 
-| Phase | Description | Status | Progress |
-|-------|-------------|--------|----------|
-| 0 | Project Setup | ✅ Complete | 100% |
-| 1 | Design System & Foundation | ✅ Complete | 100% |
-| 2 | Core Reusable Components | ✅ Complete | 100% |
-| 3 | Header & Footer | 🔄 Up Next | 0% |
-| 4 | Hero Section | ⏳ Pending | 0% |
-| 5 | Problem & How It Works | ⏳ Pending | 0% |
-| 6 | Features (Bento Grid) | ⏳ Pending | 0% |
-| 7 | Demo / Examples | ⏳ Pending | 0% |
-| 8 | Use Cases & Testimonials | ⏳ Pending | 0% |
-| 9 | Pricing | ⏳ Pending | 0% |
-| 10 | Final CTA & Footer | ⏳ Pending | 0% |
-| 11 | Global Polish & Performance | ⏳ Pending | 0% |
-| 12 | Testing & Deployment | ⏳ Pending | 0% |
+| Phase | Description                 | Status      | Progress |
+| ----- | --------------------------- | ----------- | -------- |
+| 0     | Project Setup               | ✅ Complete | 100%     |
+| 1     | Design System & Foundation  | ✅ Complete | 100%     |
+| 2     | Core Reusable Components    | ✅ Complete | 100%     |
+| 3     | Header & Footer             | ✅ Complete | 100%     |
+| 4     | Hero Section                | ✅ Complete | 100%     |
+| 5     | Problem & How It Works      | 🔄 Up Next  | 0%       |
+| 6     | Features (Bento Grid)       | ⏳ Pending  | 0%       |
+| 7     | Demo / Examples             | ⏳ Pending  | 0%       |
+| 8     | Use Cases & Testimonials    | ⏳ Pending  | 0%       |
+| 9     | Pricing                     | ⏳ Pending  | 0%       |
+| 10    | Final CTA & Footer          | ⏳ Pending  | 0%       |
+| 11    | Global Polish & Performance | ⏳ Pending  | 0%       |
+| 12    | Testing & Deployment        | ⏳ Pending  | 0%       |
 
-**Overall: ~25% Complete (3/12 phases done)**
+**Overall: ~33% Complete (4/12 phases done)**
 
 ---
 

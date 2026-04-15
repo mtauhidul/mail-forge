@@ -9,8 +9,6 @@ export function GradientText({
   className = '',
   as: Tag = 'span',
 }: GradientTextProps) {
-  return (
-    // @ts-expect-error dynamic tag
-    <Tag className={`text-gradient ${className}`}>{children}</Tag>
-  )
+  const El = Tag as React.ElementType
+  return <El className={`text-gradient ${className}`}>{children}</El>
 }
