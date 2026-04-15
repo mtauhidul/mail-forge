@@ -242,50 +242,51 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 
 ## 🔄 Phase 5: Problem & How It Works
 
-**Status:** 0% Complete
+**Status:** ✅ Complete
 
 **Problem Section:**
 
-- [ ] Section headline ("Sound familiar?")
-- [ ] 5 pain point cards in responsive grid
-- [ ] Icons with subtle pulse animation
-- [ ] Scroll-triggered stagger entrance
+- [x] Section headline ("Sound familiar?")
+- [x] 5 pain point cards in responsive grid
+- [x] Icons with subtle pulse animation
+- [x] Scroll-triggered stagger entrance
 
 **How It Works Section:**
 
-- [ ] 3-step cards with large step numbers
-- [ ] Connecting dashed line between steps (desktop)
-- [ ] Icons and brief descriptions
-- [ ] Animated on scroll (each step fades in sequentially)
+- [x] 3-step cards with large step numbers
+- [x] Connecting dashed line between steps (desktop)
+- [x] Icons and brief descriptions
+- [x] Animated on scroll (each step fades in sequentially)
 
 ---
 
-## 🔄 Phase 6: Features Section (Bento Grid)
+## ✅ Phase 6: Features Section (Bento Grid) — COMPLETE
 
-**Status:** 0% Complete
+**Completed:** April 16, 2026
 
-- [ ] Responsive bento grid layout (mix of 1×1 and 2×1 cards)
-- [ ] 6 feature cards:
-  1. **Email Templates** — Preview of 6 template categories
-  2. **Tone Selector** — Live slider switching tone (mock text updates)
-  3. **Multi-language** — Animated globe with language flags
-  4. **Subject Line Generator** — Typing animation showing suggestions
-  5. **Email Sequences** — Simple flow diagram animation
-  6. **One-Click Rewrite** — Before/after text swap animation
-- [ ] Card hover effects: lift + border glow
+- [x] Responsive bento grid layout (mix of 1×1 and 2×1 cards), 3 cols on lg
+- [x] 6 feature cards with interactive mini-widgets:
+  1. **Email Templates** (2-col) — 6 category pills + preview email snippet
+  2. **Tone Selector** (1-col) — 4 clickable tone buttons, preview text animates on switch
+  3. **Multi-language** (1-col) — 8 languages with flag emojis + "22 more" note
+  4. **Email Sequences** (2-col) — 3-step flow diagram with dashed connector arrows
+  5. **Subject Line Generator** (1-col) — Typewriter cycling through 5 subject lines
+  6. **One-Click Rewrite** (2-col) — Before/After toggle with fade animation
+- [x] Card hover glow effect via GlassCard `hover` prop
+- [x] Scroll-triggered fade-in-up per card with stagger delays
 
 ---
 
 ## 🔄 Phase 7: Demo / Examples Section
 
-**Status:** 0% Complete
+**Status:** ✅ Complete
 
-- [ ] Section headline ("See it in action")
-- [ ] Tab selector for email types (Cold Outreach / Follow-up / Marketing / Support)
-- [ ] Side-by-side: "Before" rough draft vs "After" AI version
-- [ ] Gmail-style mockup UI for the "After" email
-- [ ] Tone toggle (4 tones) — updates visible email
-- [ ] Copy button on output
+- [x] Section headline ("See it in action")
+- [x] Tab selector for email types (Cold Outreach / Follow-up / Marketing / Support)
+- [x] Side-by-side: "Before" rough draft vs "After" AI version
+- [x] Gmail-style mockup UI for the "After" email
+- [x] Tone toggle (4 tones) — updates visible email
+- [x] Copy button on output
 
 ---
 
@@ -377,9 +378,9 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 | 2     | Core Reusable Components    | ✅ Complete | 100%     |
 | 3     | Header & Footer             | ✅ Complete | 100%     |
 | 4     | Hero Section                | ✅ Complete | 100%     |
-| 5     | Problem & How It Works      | 🔄 Up Next  | 0%       |
-| 6     | Features (Bento Grid)       | ⏳ Pending  | 0%       |
-| 7     | Demo / Examples             | ⏳ Pending  | 0%       |
+| 5     | Problem & How It Works      | ✅ Complete | 100%     |
+| 6     | Features (Bento Grid)       | ✅ Complete | 100%     |
+| 7     | Demo / Examples             | ✅ Complete | 100%     |
 | 8     | Use Cases & Testimonials    | ⏳ Pending  | 0%       |
 | 9     | Pricing                     | ⏳ Pending  | 0%       |
 | 10    | Final CTA & Footer          | ⏳ Pending  | 0%       |
