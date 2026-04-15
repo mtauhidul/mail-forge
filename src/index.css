@@ -94,46 +94,43 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
-    transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
   }
 
-  .card:hover {
+  /* No universal hover on .card — apply .card-hover only where intentional */
+  .card-hover:hover {
     border-color: var(--border-hover);
     box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
   }
 
   /* ── Buttons ── */
+
+  /* Primary: fixed dark purple so white text always has contrast in both modes */
   .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.625rem 1.375rem;
     border-radius: var(--radius-lg);
     font-size: 0.9375rem;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    background: var(--accent);
+    background: #6D28D9;
     color: #ffffff;
-    box-shadow: var(--shadow-sm);
-    transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    transition: background var(--transition-fast), transform var(--transition-fast);
   }
 
   .btn-primary:hover {
-    background: var(--accent-hover);
-    box-shadow: var(--shadow-glow);
-    transform: translateY(-1px);
+    background: #5B21B6;
   }
 
-  .btn-primary:active { transform: translateY(0); }
+  .btn-primary:active { transform: translateY(1px); }
 
   .btn-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.625rem 1.375rem;
     border-radius: var(--radius-lg);
     font-size: 0.9375rem;
     font-weight: 500;
@@ -141,13 +138,34 @@
     background: transparent;
     color: var(--text-primary);
     border: 1px solid var(--border);
-    transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+    transition: border-color var(--transition-fast), background var(--transition-fast);
   }
 
   .btn-secondary:hover {
     border-color: var(--border-hover);
-    background: var(--bg-tertiary);
-    transform: translateY(-1px);
+    background: var(--surface);
+  }
+
+  .btn-secondary:active { transform: translateY(1px); }
+
+  /* Ghost: same layout as other buttons, just no background or border */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast), background var(--transition-fast);
+  }
+
+  .btn-ghost:hover {
+    color: var(--text-primary);
+    background: var(--surface);
   }
 
   /* ── Badge ── */
