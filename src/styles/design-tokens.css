@@ -1,0 +1,114 @@
+/* ============================================
+   MailForge AI — Design Tokens (Aether Palette)
+   ============================================ */
+
+:root {
+  /* --- Brand Accent --- */
+  --accent:           #7C3AED;
+  --accent-hover:     #6D28D9;
+  --accent-light:     #A78BFA;
+  --accent-glow:      rgba(124, 58, 237, 0.2);
+  --accent-subtle:    rgba(124, 58, 237, 0.08);
+
+  /* --- Light Mode Surfaces --- */
+  --bg-primary:       #FFFFFF;
+  --bg-secondary:     #F8F9FB;
+  --bg-tertiary:      #F1F3F7;
+  --bg-card:          #F8F9FB;
+  --bg-card-hover:    #F1F3F7;
+  --surface:          #EDEEF2;
+
+  /* --- Light Mode Text --- */
+  --text-primary:     #0A0A12;
+  --text-secondary:   #52525B;
+  --text-muted:       #A1A1AA;
+  --text-inverse:     #FFFFFF;
+
+  /* --- Light Mode Borders --- */
+  --border:           rgba(0, 0, 0, 0.07);
+  --border-hover:     rgba(0, 0, 0, 0.14);
+  --border-accent:    rgba(124, 58, 237, 0.25);
+
+  /* --- Glass (Light) --- */
+  --glass-bg:         rgba(255, 255, 255, 0.75);
+  --glass-border:     rgba(0, 0, 0, 0.07);
+  --glass-blur:       blur(16px);
+
+  /* --- Orb Ambiance (Light) --- */
+  --orb-1:            rgba(167, 139, 250, 0.12);
+  --orb-2:            rgba(99, 102, 241, 0.08);
+
+  /* --- Spacing --- */
+  --space-section:    6rem;
+  --space-container:  1280px;
+  --space-pad:        1.5rem;
+
+  /* --- Radius --- */
+  --radius-sm:        0.375rem;
+  --radius-md:        0.625rem;
+  --radius-lg:        0.875rem;
+  --radius-xl:        1.25rem;
+  --radius-2xl:       1.75rem;
+  --radius-full:      9999px;
+
+  /* --- Transitions --- */
+  --ease-base:        cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:      cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast:  150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:  400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Shadows (Light) --- */
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:        0 4px 12px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg:        0 12px 32px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-accent:    0 0 0 3px rgba(124, 58, 237, 0.2);
+  --shadow-glow:      0 0 28px rgba(124, 58, 237, 0.25), 0 0 60px rgba(124, 58, 237, 0.1);
+}
+
+/* ============================================
+   Dark Mode Tokens
+   ============================================ */
+.dark {
+  /* --- Brand Accent (brighter in dark) --- */
+  --accent:           #A78BFA;
+  --accent-hover:     #C4B5FD;
+  --accent-light:     #DDD6FE;
+  --accent-glow:      rgba(167, 139, 250, 0.2);
+  --accent-subtle:    rgba(167, 139, 250, 0.08);
+
+  /* --- Dark Mode Surfaces --- */
+  --bg-primary:       #06060A;
+  --bg-secondary:     #0A0A12;
+  --bg-tertiary:      #0E0E18;
+  --bg-card:          #0E0E14;
+  --bg-card-hover:    #16161F;
+  --surface:          #16161F;
+
+  /* --- Dark Mode Text --- */
+  --text-primary:     #F1F5F9;
+  --text-secondary:   #94A3B8;
+  --text-muted:       #475569;
+  --text-inverse:     #0A0A12;
+
+  /* --- Dark Mode Borders --- */
+  --border:           rgba(255, 255, 255, 0.06);
+  --border-hover:     rgba(255, 255, 255, 0.12);
+  --border-accent:    rgba(167, 139, 250, 0.25);
+
+  /* --- Glass (Dark) --- */
+  --glass-bg:         rgba(255, 255, 255, 0.03);
+  --glass-border:     rgba(255, 255, 255, 0.06);
+  --glass-blur:       blur(16px);
+
+  /* --- Orb Ambiance (Dark) --- */
+  --orb-1:            rgba(167, 139, 250, 0.07);
+  --orb-2:            rgba(99, 102, 241, 0.05);
+
+  /* --- Shadows (Dark) --- */
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:        0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg:        0 12px 32px rgba(0,0,0,0.6);
+  --shadow-accent:    0 0 0 3px rgba(167, 139, 250, 0.2);
+  --shadow-glow:      0 0 28px rgba(167, 139, 250, 0.2), 0 0 60px rgba(167, 139, 250, 0.08);
+}

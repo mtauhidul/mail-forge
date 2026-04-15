@@ -4,7 +4,7 @@
 > **Purpose:** Portfolio showcase — modern design & animations
 > **Started:** April 15, 2026
 > **Status:** 🟡 In Progress
-> **Current Phase:** Phase 1 — Design System & Foundation
+> **Current Phase:** Phase 2 — Core Reusable Components
 
 ---
 
@@ -165,22 +165,17 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 
 ---
 
-## 🔄 Phase 1: Design System & Foundation
-**Status:** 0% Complete
+## ✅ Phase 1: Design System & Foundation — COMPLETE
+**Completed:** April 15, 2026
 
-- [ ] Install Framer Motion: `pnpm add framer-motion`
-- [ ] Install Google Fonts (Inter + Space Grotesk) via CSS `@import`
-- [ ] Create `src/styles/design-tokens.css` with all CSS variables
-- [ ] Update `tailwind.config.ts` with custom colors, fonts, gradients
-- [ ] Update `src/index.css` with base styles (font, bg, color)
-- [ ] Create `src/lib/animations.ts` with reusable Framer Motion variants
-- [ ] Create `src/contexts/ThemeContext.tsx` for dark/light mode
-- [ ] Create `src/hooks/useTheme.ts`
-
-**Deliverables:**
-- Working dark/light mode toggle
-- All design tokens defined
-- Animation variants ready to use
+- [x] Install Framer Motion: `pnpm add framer-motion`
+- [x] Install Google Fonts (Inter + Space Grotesk) via CSS `@import`
+- [x] Create `src/styles/design-tokens.css` with all CSS variables
+- [x] Update `tailwind.config.ts` with custom colors, fonts, gradients
+- [x] Update `src/index.css` with base styles (font, bg, color)
+- [x] Create `src/lib/animations.ts` with reusable Framer Motion variants
+- [x] Create `src/contexts/ThemeContext.tsx` for dark/light mode
+- [x] Wire up ThemeProvider in `main.tsx`
 
 ---
 
@@ -359,8 +354,8 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 | Phase | Description | Status | Progress |
 |-------|-------------|--------|----------|
 | 0 | Project Setup | ✅ Complete | 100% |
-| 1 | Design System & Foundation | 🔄 Up Next | 0% |
-| 2 | Core Reusable Components | ⏳ Pending | 0% |
+| 1 | Design System & Foundation | ✅ Complete | 100% |
+| 2 | Core Reusable Components | 🔄 Up Next | 0% |
 | 3 | Header & Footer | ⏳ Pending | 0% |
 | 4 | Hero Section | ⏳ Pending | 0% |
 | 5 | Problem & How It Works | ⏳ Pending | 0% |
@@ -372,7 +367,7 @@ Hover lift:     y: -4, scale: 1.02, transition: 0.2s
 | 11 | Global Polish & Performance | ⏳ Pending | 0% |
 | 12 | Testing & Deployment | ⏳ Pending | 0% |
 
-**Overall: ~8% Complete (1/12 phases done)**
+**Overall: ~17% Complete (2/12 phases done)**
 
 ---
 
